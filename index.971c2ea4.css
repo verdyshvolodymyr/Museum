@@ -1,0 +1,226 @@
+.header {
+  flex-direction: column-reverse;
+  display: flex;
+  position: relative;
+}
+
+@media (width >= 768px) {
+  .header {
+    --column: 2;
+    grid-template-columns: repeat(var(--column), 1fr);
+    column-gap: 20px;
+    display: grid;
+  }
+}
+
+@media (width >= 768px) and (width >= 768px) {
+  .header {
+    --column: 6;
+    column-gap: 30px;
+  }
+}
+
+@media (width >= 768px) and (width >= 1280px) {
+  .header {
+    --column: 12;
+  }
+}
+
+.header__menu {
+  position: absolute;
+  top: 27px;
+  left: 20px;
+}
+
+@media (width >= 1280px) {
+  .header__menu-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (width >= 768px) {
+  .header__menu {
+    top: 39px;
+    left: 34px;
+  }
+}
+
+@media (width >= 1280px) {
+  .header__menu {
+    left: 55px;
+  }
+}
+
+.header__left {
+  margin: 20px 20px 0;
+  position: relative;
+}
+
+@media (width >= 768px) {
+  .header__left {
+    grid-column: span 3;
+    margin-top: 127px;
+    margin-left: 34px;
+  }
+}
+
+@media (width >= 1280px) {
+  .header__left {
+    grid-column: span 5;
+    margin-top: 206px;
+    margin-left: 55px;
+  }
+}
+
+.header__left-title {
+  text-align: center;
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+@media (width >= 768px) {
+  .header__left-title {
+    text-align: start;
+    font-size: 54px;
+    line-height: 64px;
+  }
+}
+
+@media (width >= 1280px) {
+  .header__left-title {
+    font-size: 72px;
+    line-height: 86px;
+  }
+}
+
+.header__left-btn {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #1a5a4c;
+  margin-top: 20px;
+  padding: 16px 132px 16px 82px;
+  font-family: IBM Plex Sans, serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  position: relative;
+}
+
+.header__left-btn:after {
+  cursor: pointer;
+  content: url("arrow-righ-white.b5ef74b7.svg");
+  background-color: #1a5a4c;
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (width >= 768px) {
+  .header__left-btn:after {
+    padding: 21px;
+  }
+
+  .header__left-btn {
+    margin-top: 38px;
+    padding: 25px 140px 25px 60px;
+  }
+}
+
+@media (width >= 1280px) {
+  .header__left-btn {
+    margin-top: 89px;
+    margin-left: 187px;
+  }
+
+  .header__left:before {
+    content: "ПОДІЇ";
+    font-family: IBM Plex Sans, serif;
+    font-size: 14px;
+    line-height: 14px;
+    position: absolute;
+    bottom: 100px;
+    left: 33px;
+    transform: rotate(-90deg);
+  }
+
+  .header__left:after {
+    content: "";
+    background-color: #1a5a4c;
+    width: 70px;
+    height: 1px;
+    position: absolute;
+    bottom: 35px;
+    left: 19px;
+    transform: rotate(-90deg);
+  }
+}
+
+.header__right {
+  background-image: url("muzej.614728da.png");
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
+
+@media (width >= 768px) {
+  .header__right {
+    grid-column: 4 / -1;
+    height: 384px;
+  }
+}
+
+@media (width >= 1280px) {
+  .header__right {
+    grid-column: 6 / -1;
+    height: 655px;
+  }
+}
+
+.header__right-logo {
+  text-align: center;
+  margin: 0;
+  padding-top: 8px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+@media (width >= 768px) {
+  .header__right-logo {
+    text-align: start;
+    padding-top: 15px;
+    padding-left: 65px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat, serif;
+}
+
+.container {
+  padding-inline: 20px;
+}
+
+@media (width >= 768px) {
+  .container {
+    padding-inline: 34px;
+  }
+}
+
+@media (width >= 1280px) {
+  .container {
+    max-width: 1020px;
+    margin-inline: auto;
+    padding-inline: 55px;
+  }
+}
+/*# sourceMappingURL=index.971c2ea4.css.map */
