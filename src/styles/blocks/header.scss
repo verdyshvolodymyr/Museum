@@ -1,0 +1,168 @@
+.header {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+
+  @include on-tablet {
+    @include page-grid;
+  }
+
+  &__menu {
+    position: absolute;
+    top: 27px;
+    left: 20px;
+
+    &-icon {
+      @include on-desktop {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @include on-tablet {
+      top: 39px;
+      left: 34px;
+    }
+
+    @include on-desktop {
+      left: 55px;
+    }
+  }
+
+  &__left {
+    position: relative;
+    margin: 20px 20px 0;
+
+    @include on-tablet {
+      margin-top: 127px;
+      margin-left: 34px;
+      grid-column: span 3;
+    }
+
+    @include on-desktop {
+      margin-top: 206px;
+      margin-left: 55px;
+      grid-column: span 5;
+    }
+
+    &-title {
+      margin: 0;
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 45px;
+      text-align: center;
+
+      @include on-tablet {
+        font-size: 54px;
+        line-height: 64px;
+        text-align: start;
+      }
+
+      @include on-desktop {
+        font-size: 72px;
+        line-height: 86px;
+      }
+    }
+
+    &-btn {
+      cursor: pointer;
+      position: relative;
+      margin-top: 20px;
+      font-family: $imb-plex;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 16px 132px 16px 82px;
+      border: 1px solid #1A5A4C;
+      background-color: #fff;
+
+      &::after {
+        cursor: pointer;
+        position: absolute;
+        content: url(/src/images/icon/arrow-righ-white.svg);
+        background-color: #1A5A4C;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        right: 0;
+        padding: 12px;
+
+        @include on-tablet {
+          padding: 21px;
+        }
+      }
+
+      @include on-tablet {
+        margin-top: 38px;
+        padding: 25px 140px 25px 60px;
+      }
+
+      @include on-desktop {
+        margin-top: 89px;
+        margin-left: 187px;
+
+      }
+    }
+
+    @include on-desktop {
+
+    &::before {
+      content: 'ПОДІЇ';
+      position: absolute;
+      font-family: $imb-plex;
+      font-size: 14px;
+      line-height: 14px;
+
+      transform: rotate(-90deg);
+      left: 33px;
+      bottom: 100px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 1px;
+      background-color: #1A5A4C;
+
+      transform: rotate(-90deg);
+      left: 19px;
+      bottom: 35px;
+    }
+    }
+  }
+
+  &__right {
+    width: 100%;
+    height: 300px;
+    background-image: url(/src/images/header/muzej.png);
+    background-size: cover;
+
+    @include on-tablet {
+      height: 384px;
+      grid-column: 4 / -1;
+    }
+
+    @include on-desktop {
+      height: 655px;
+      grid-column: 6 / -1;
+    }
+
+    &-logo {
+      margin: 0;
+      padding-top: 8px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 30px;
+
+      @include on-tablet {
+        font-size: 36px;
+        line-height: 36px;
+        padding-top: 15px;
+        padding-left: 65px;
+        text-align: start;
+      }
+    }
+}
+}

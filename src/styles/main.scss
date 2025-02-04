@@ -1,7 +1,11 @@
 @import 'utils';
-@import 'fonts';
-@import 'typography';
+@import '/src/styles/blocks/header';
 
 body {
-  background: $c-gray;
+  margin: 0;
+  font-family: "Montserrat", serif;
+}
+
+.container {
+  @include content-padding-in-line;
 }
